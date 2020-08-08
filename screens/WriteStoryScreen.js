@@ -25,12 +25,12 @@ submitStory = ()=>{
       author: '',
       storyText: ''
   })
-  ToastAndroid.show('Your story has been sumitted',ToastAndroid.SHORT)
+  //ToastAndroid.show('Your story has been sumitted',ToastAndroid.SHORT)
 }
   render(){
     return(
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
-      <View>
+      
       <Header
           backgroundColor={'pink'}
           centerComponent={{
@@ -77,7 +77,7 @@ submitStory = ()=>{
         >
           <Text style={styles.buttonText}>Submit</Text>
         </TouchableOpacity>
-      </View>
+      
       </KeyboardAvoidingView>
     )
   }
