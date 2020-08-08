@@ -83,12 +83,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
   },
-  item: {
-    backgroundColor: 'pink',
-    padding:10,
-    marginVertical: 8,
-    marginHorizontal: 16,
-  },
   title: {
     fontSize: 32,
   },
@@ -96,7 +90,7 @@ const styles = StyleSheet.create({
     height: 80,
     width:'100%',
     borderWidth: 2,
-    borderColor: 'pink',
+    borderColor: 'black',
     justifyContent:'center',
     alignSelf: 'center',
   }
