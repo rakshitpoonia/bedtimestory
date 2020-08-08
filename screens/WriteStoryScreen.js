@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TextInput, TouchableOpacity, Alert} from 'react-native';
+import { Text, View, StyleSheet, TextInput, TouchableOpacity, Alert,KeyboardAvoidingView,ToastAndroid} from 'react-native';
 import { Header } from 'react-native-elements';
 import db from '../config'
   
@@ -25,11 +25,12 @@ submitStory = ()=>{
       author: '',
       storyText: ''
   })
-  Alert.alert("Story has been submitted")
+  ToastAndroid.show('Your story has been sumitted',ToastAndroid.SHORT)
 }
   render(){
     return(
-      <View style={styles.container}>
+      <KeyboardAvoidingView behavior="padding" style={styles.container}>
+      <View>
       <Header
           backgroundColor={'pink'}
           centerComponent={{
@@ -77,6 +78,7 @@ submitStory = ()=>{
           <Text style={styles.buttonText}>Submit</Text>
         </TouchableOpacity>
       </View>
+      </KeyboardAvoidingView>
     )
   }
   

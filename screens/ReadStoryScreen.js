@@ -1,11 +1,14 @@
-import * as React from 'react';
-import { Text, View, StyleSheet, TextInput} from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View} from 'react-native';
+import db from '../config'
 import { Header } from 'react-native-elements';
 
-export default class ReadScreen extends React.Component{
+
+
+export default class ReadStoryScreen extends React.Component {
   render(){
     return(
-      <View style={styles.container}>
+      <View>
       <Header
           backgroundColor={'pink'}
           centerComponent={{
@@ -13,15 +16,9 @@ export default class ReadScreen extends React.Component{
             style: { color: '#fff', fontSize: 30 },
           }}
         />
-        <Text>Welcome to Story Reading Tab</Text>
+      <Text>Story Reading Tab</Text>
       </View>
     )
   }
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    
-  }
-});
+
