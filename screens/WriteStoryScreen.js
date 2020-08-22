@@ -25,7 +25,7 @@ submitStory = ()=>{
       author: '',
       storyText: ''
   })
-  //ToastAndroid.show('Your story has been sumitted',ToastAndroid.SHORT)
+  Alert.alert("Your Story has been submitted")
 }
   render(){
     return(
@@ -94,9 +94,8 @@ const styles = StyleSheet.create({
     width: '90%',
     alignSelf: 'center',
     height: 400,
-    alignText:'left',
     borderWidth: 4,
-    outline: 'none',
+    //outline: 'none',
   },
   title:{
     height: 40,

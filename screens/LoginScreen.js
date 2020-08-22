@@ -6,8 +6,8 @@ export default class LoginScreen extends React.Component{
     constructor(){
         super();
         this.state={
-            emailId:'',
-            password:'',
+            emailId:"",
+            password:"",
         }
     }
     login=async(email,password)=>{
@@ -15,7 +15,7 @@ export default class LoginScreen extends React.Component{
             try{
                 const response=await firebase.auth().signInWithEmailAndPassword(email,password)
                 if(response){
-                    this.props.navigation.navigate("WriteStoryScreen")
+                    this.props.navigation.navigate("WriteStory")
                     console.log("ok");
                 }
             }
@@ -23,9 +23,17 @@ export default class LoginScreen extends React.Component{
                 switch(error.code){
                 case 'auth/user-not-found':
                     Alert.alert("The user does not exist")
+                    this.setState({
+                        emailId:"",
+                        password:""
+                    })
                     break
                 case 'auth/invalid-email':
                     Alert.alert("Incorrect email or password")
+                    this.setState({
+                        emailId:"",
+                        password:""
+                    })
                     break
                 }
             }
@@ -61,7 +69,7 @@ export default class LoginScreen extends React.Component{
                 secureTextEntry={true}
                 onChangeText={(text)=>{
                     this.setState({
-                      emailId: text
+                      password: text
                     })
                   }}
                 />
